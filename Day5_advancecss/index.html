@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<!-- <body>
+     <div id="specialdiv" class="nrmldiv" onclick="changeBg()">
+        <p>Lorem </p>
+    </div>
+    <script>
+        // function changeBg(){
+        //     document.querySelector("#specialdiv").style.backgroundColor="red";
+        //     // document.querySelector(".nrmldiv").style.backgroundColor="green";
+
+        // }
+
+        const style=document.createElement('style');
+        style.innerHTML=`p{font-size:10px;
+                            color:green;}
+                        `;
+        document.head.appendChild(style);
+
+        const newpara=document.createElement("p");
+        newpara.innerHTML="This is a new";
+        document.body.appendChild(newpara);
+        
+        newpara.addEventListener("mouseout",()=>{newpara.style.backgroundColor="White"});
+
+        newpara.addEventListener("mouseover",()=>{newpara.style.backgroundColor="Yellow"});
+    </script> -->
+    <!-- <script>
+        function myMove(){
+            let id=null;
+            const elem=document.getElementById("animate");
+            let pos=0;
+            clearInterval(id);
+            id=setInterval(frame,5);
+            function frame(){
+                if(pos==350){
+                    clearInterval(id);
+                }
+                else{
+                    pos++;
+                }
+                elem.style.top=pos+'px';
+                elem.style.left=pos+'px';
+
+            }
+        }
+    </script>
+    <button onclick="myMove()" >Clickme</button>
+    <div id="container">
+        <div id="animate"></div>
+    </div> -->
+    <!-- <button id="mybtn">Clickme</button> -->
+    <!-- <script>
+        function firstFunction(){
+            alert("The first");
+        }
+        function secndFunction(){
+            alert("The secnd");
+        }
+        var btn=document.getElementById("mybtn");
+        btn.addEventListener("click",firstFunction);
+        btn.addEventListener("click",secndFunction);
+
+    </script> -->
+    <!-- <script>
+        var btn=document.getElementById("mybtn");
+      hello=  ()=>{
+          alert("hi how are you");
+      }
+      sethover=()=>{
+          btn.style.background="yellow";
+      }
+      setnormalcolor=()=>{
+          btn.style.background="white";
+      }
+      btn.addEventListener("click",hello);
+      btn.addEventListener("mouseover",sethover);
+      btn.addEventListener("mouseout",setnormalcolor);
+
+    </script> =
+    <form onsubmit="validateForm()" name="form_1">
+        <input type="text"name="fname">
+        <input type="number"  id="num">
+        <input type="submit">
+    </form>
+    <script>
+        //check for empty fields
+        function validateForm(e){
+            e.preventDefault();
+
+            let a=document.forms["form_1"]["fname"].value;
+            console.log(a);
+            if(a==""){
+                alert("enter");
+                return false;
+            }
+
+        }
+        // check for numeric entry
+        function myfunction(){
+            let x=document.getElementsById("num").value;
+            let text;
+            if(isNaN(x) || x<1 || x>10){
+                text="oops";
+            }
+            else{
+                text="corct";
+            }
+            document.getElementById("a").innerHTML=text;
+        }
+        form.addEventListener('submit',validateForm);
+
+    </script> 
+-->
+<body onload="document.frm.tx.focus()">
+    <div>
+        <h2>Input an email and submit</h2>
+        <form name="frm" action="#">
+            <ul>
+                <li>
+                    <input type="text" name="tx">
+                </li>
+                <li>
+                    <input type="submit"name="sub" value="submitt"
+                    onclick="validateEmail(document.frm.tx)"
+                    />
+
+                </li>
+            </ul>
+        </form>
+    </div>
+        <script>
+            function validateEmail(inpt){
+                var mailformat=/^\w+([\.-]?\w+)*@w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                if(inpt.value.match(mailformat)){
+                    alert("valid email address");
+                    document.form1.text1.focus();
+                    return true;
+                }
+                else{
+                    alert("invalied");
+                    document.form1.text1.focus();
+                    return false;
+                }
+
+            }
+        </script>
+</body>
+</html>

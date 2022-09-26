@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--  
+    <h1 id="head">This is my heading</h1>
+    <button  type ="button" onclick  ="changeText()">Click</button>
+    <button  type ="button" onmouseover ="changeText()">Click</button>
+
+    
+    <script>
+       
+        console.log("this is console");
+        function changeText(){
+            document.getElementById("head").style.display="none";
+
+        }
+
+
+        name=prompt("Enter the marks");
+        alert(name>40?"pass":"fail");
+    </script>
+
+    <h1 id="head" onmouseover="changebackground()">Hello Good Morning</h1>
+    <img id="img" src="C:/Users/venumadhav.tripasuri/Desktop/Tiger Assignments/photography assignment/images/1.jpg"
+            alt="lord shiva">
+    <button  ondblclick="changecolor()" onclick="hideimage()">Click</button>
+    <script>
+       function changecolor(){
+        document.getElementById("head").style.color="green";
+
+       }
+       function changebackground(){
+        document.getElementById("head").style.background="blue";
+
+       }
+       function hideimage(){
+        document.getElementById("img").style.display="none";
+
+       }
+       pass=(prompt("Enter password"));
+       pass==='hello'?console.log('welcome'):alert('invalid password');
+    </script>
+    <script>
+        function divideNumbers(divd,divs){
+            var q=divd/divs;
+            var r=divd%divs;
+            var arr=[divd,divs,q,r];
+            return arr;
+        }
+            
+            var all=divideNumbers(10,3)
+            alert(all[0]);
+            alert(all[1]);
+            alert(all[2]);
+            alert(all[3]);
+    </script>
+    <script>
+        var add= new Function("a","b","return a+b");
+        document.writeln(add(4,6));
+    </script>
+
+
+    
+    <h1 id="head" >Counter </h1>
+    <button onclick="add()">Inc</button>
+    <button onclick="sub()">dec</button>
+    <script>
+        counter=0;
+        
+        
+        function add(){
+            counter+=1;
+            document.getElementById("head").innerHTML="counter"+(counter);
+        }
+        function sub(){
+            if (counter<0){
+            alert("counter");
+            }
+            
+            counter-=1;
+            document.getElementById("head").innerHTML="counter"+(counter);
+            
+        }
+       
+    </script>
+    -->
+    <h1> Simple Calclulator </h1>
+    Enter Number 1 <input type="number" id="a">
+    Enter Number 2 <input type="number" id="b">
+    <br>
+    <br>
+    <button onclick="add()">+</button>
+    <button onclick="sub()">-</button>
+    <button onclick="mul()">*</button>
+    <button onclick="div()">/</button>
+    <button onclick="mod()">%</button>
+    <h1 id="res"> kk</h1>
+    <script>
+       
+        result=0
+
+        function add(){
+            a=document.getElementById("a").value;
+            b=document.getElementById("b").value;
+            result = Number(a)+Number(b);
+            document.getElementById("res").innerHTML="Result is"+result;
+        }
+        function sub(){
+            result=a-b;
+            document.getElementById("res")="Result is"+result;
+
+        }
+        function mul(){
+            result=a*b;
+            document.getElementById("res")="Result is"+result;
+
+        }
+        function div(){
+            if (a>b){
+            result=a/b;
+        }
+            else{
+                result=b/a;
+            }
+            document.getElementById("res")="Result is"+result;
+
+        }
+        function mod(){
+            result=a%b;
+            document.getElementById("res")="Result is"+result;
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+/* div{
+    height: 260px;
+    width: 200px;
+    background-color: aqua;
+    /* visibility:hidden; */
+    /* display: none; */
+    /* opacity: 0.2; */
+    /* position: static;
+    position: fixed;
+        /* for fixed static relative absolute give the top left right down nd static not needed 
+    position: relative;
+    position: absolute;
+    position: sticky;
+    right: 50px;
+    bottom: 50px;
+}     */
+
+
+/* #div1 p{
+    background-color: yellow;
+    excpet it selects all in that div
+
+} 
+#div1 > p{
+    background-color: yellow; 
+    excpet 2nd para it selects all in that div
+}
+
+#div1 +p{
+    background-color: yellow;
+   /* it selects one below that div 
+
+}
+#div1 ~p{
+    background-color:  yellow;
+    it selects all below that div
+}
+*/
+
+
+
+/* input[type=text]{
+    background-color: green;
+}
+input[type=text]:focus{
+    background-color: red; 
+    after clicking change color to red
+}
+input[type=checkbox]:checked{
+    width: 200px;
+} */
+
+div{
+    display: flex;
+    /* flex-direction: column; */
+    flex-direction: row;
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column-reverse; */
+    flex-wrap: nowrap;  
+    justify-content: flex-start;  
+    align-items: flex-end;
+
+
+}
+p{
+    margin:10px;
+    text-align: justify;
+}
+@media only screen and(max-width:600px) {
+    div{
+        display: flex;
+        flex-direction: column;
+    }
+    
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="validateForm()" method="get"  name="myform">
+    <input id="sal"type="text" name="u">
+    <input type="text" name="v">
+    <button  type="submit"> submit</button>
+
+    </form>
+    <!-- <script>
+        var form=document.forms["myform"]
+        function validateForm(e){
+            e.preventDefault();
+            let un=document.forms["myform"]["u"].value;
+            let em=document.forms["myform"]["v"].value;
+
+            if(un>=5000){
+                document.getElementById("sal").style.border="2px solid green";
+            }
+            else{
+                document.getElementById("sal").style.border="2px solid yellow";
+
+            }
+        }
+        form.addEventListener('submit',validateForm);
+    </script> -->
+    <script>
+        class Person{
+            constructor(name, address){
+                this.name = name;
+                this.address = address;
+            }
+            showInfo(){
+                console.log(this.name+", "+this.address);
+            }
+        }
+        class Student extends Person{
+            constructor(name, address, degree){
+                super(name, address);
+                this.degree = degree;
+            }
+        }
+        class PhdStudent extends Student{
+            constructor(name,address,degree,thesis){
+                    super(name,address,degree);
+                    this.thesis=thesis;
+
+            }
+            showThesis(){
+                console.log("thesistopic is"+this.thesis);
+            }
+        }
+
+
+        let s1 = new PhdStudent("Charlie", "Pune", "BTech","Machine Learning");
+
+        s1.showInfo();
+        s1.showThesis();
+    </script>
+</body>
+</html>
